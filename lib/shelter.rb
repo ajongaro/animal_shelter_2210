@@ -18,6 +18,14 @@ class Shelter
   end
 
   def over_capacity?
-    @pets.count >= @capacity
+    @pets.count > @capacity
+  end
+
+  def adopt
+    until @pets.count <= @capacity
+      adopted = @pets.sample
+      puts "#{adopted} was just adopted!"
+      @pets.delete(adopted)
+    end
   end
 end
