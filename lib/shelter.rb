@@ -7,6 +7,13 @@ class Shelter
     @pets = []
   end
 
-  # def add_pet(name)
+  def add_pet(name)
+    @pets << name 
+  end
 
+  def call_pets
+    @pets.map do |pet|
+      pet + "!"
+    end
+  end
 end
