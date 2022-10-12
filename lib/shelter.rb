@@ -16,4 +16,8 @@ class Shelter
       pet + "!"
     end
   end
+
+  def over_capacity?
+    @pets.count >= @capacity
+  end
 end
